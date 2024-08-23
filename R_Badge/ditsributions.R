@@ -1,6 +1,6 @@
 library(tidyverse)
 
-
+#create a tibble with the three distribution types
 df <- tibble(
   
   uniform = runif(1000),
@@ -9,7 +9,7 @@ df <- tibble(
   
 )
 
-
+#create a histogram for each type(color them differently)
 ggplot(df, aes(x = uniform ))+
   geom_histogram(fill = "blue", color = "black")
 
