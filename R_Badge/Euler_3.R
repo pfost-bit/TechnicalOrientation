@@ -36,6 +36,3 @@ for(i in 2:max_value){
 
 
 max(factors)
-
-
-max(factors)
