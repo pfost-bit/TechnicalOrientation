@@ -22,8 +22,8 @@ max_value <- floor(sqrt(number))+1
 # now we check to see if its "pair" is a prime  
 
 for(i in 2:max_value){
-  if (is_prime2(i)){
-    if(number %% i == 0){
+  if(number %% i == 0){
+    if (is_prime2(i)){
       pair <- number/i
       factors <- append(factors, i)
       if(is_prime2(pair)){
@@ -33,6 +33,9 @@ for(i in 2:max_value){
   }
     
 }
+
+
+max(factors)
 
 
 max(factors)
