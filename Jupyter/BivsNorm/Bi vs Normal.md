@@ -37,7 +37,7 @@ plt.savefig('small_n.png', dpi=400, bbox_inches='tight')
 
 
     
-![png](output_2_0.png)
+![png](small_n.png)
     
 
 
