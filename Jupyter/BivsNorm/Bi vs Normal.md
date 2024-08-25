@@ -67,7 +67,7 @@ plt.savefig('med_n.png', dpi=400, bbox_inches='tight')
 
 
     
-![png](output_3_0.png)
+![png](med_n.png)
     
 
 
@@ -91,7 +91,7 @@ plt.savefig('large_n.png', dpi=400, bbox_inches='tight')
 
 
     
-![png](output_4_0.png)
+![png](large_n.png)
     
 
 
