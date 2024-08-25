@@ -1,3 +1,9 @@
+Binomial and Normal Distributions converge with large Ns
+================
+
+This is a short presentation on how as the number of observations *n*
+increases a binomial distribution approaches the normal distribution
+
 ```python
 import numpy as np
 import pandas as pd
