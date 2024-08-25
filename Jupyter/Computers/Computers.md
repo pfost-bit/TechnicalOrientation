@@ -1,15 +1,24 @@
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from pandas import Series, DataFrame
-```
+Class Data
+================
+Patrick Foster
+
+## Fall 24 MSDS Computer Data
+
+The following graphs are pulled from the data set. The first two are the
+qualitative data sets that could not be captured with a histogram.
+
+================
+
+
+First we have to read in the data using pandas. The data exists in a CSV file.
 
 
 ```python
 df = pd.read_csv("2023-06-13-survey.csv")
 ```
 
+
+Here we rename the headers to be more manageable
 
 ```python
 df = df.rename(columns={'Operating System': 'os', 'CPU Cycle Rate (in GHz)':'CPU', 'CPU Number of Cores (int)': 'cores', 'RAM (in GB)':'RAM', 'Hard Drive Size (in GB)':'Memory','GPU (short description as a string)': 'GPU', 'GPU CUDA Number of Cores (int)':'CODA'})
@@ -166,7 +175,7 @@ df
 </div>
 
 
-
+First we have a look at the operating systems that are being used by the cohort. I use a bar plot for the qualatative data.
 
 ```python
 df['os'].value_counts().plot.bar(title = 'Operating Systems')
@@ -185,16 +194,7 @@ df['os'].value_counts().plot.bar(title = 'Operating Systems')
     
 
 
-
-```python
-df['GPU'].value_counts().plot.bar(title = 'GPU Types')
-```
-
-
-
-
-    <Axes: title={'center': 'GPU Types'}, xlabel='GPU'>
-
+The types of GPUs.
 
 
 
@@ -203,6 +203,7 @@ df['GPU'].value_counts().plot.bar(title = 'GPU Types')
     
 
 
+The amount of computing power based off the CPU clock speed. Here we switch to histograms.
 
 ```python
 df['CPU'].plot.hist(alpha = .5, title = 'CPU clock speed in GHz')
@@ -221,15 +222,7 @@ df['CPU'].plot.hist(alpha = .5, title = 'CPU clock speed in GHz')
     
 
 
-
-```python
-df['cores'].plot.hist(color = 'r', alpha = .3, title = 'Number of Cores')
-```
-
-
-
-
-    <Axes: title={'center': 'Number of Cores'}, ylabel='Frequency'>
+How many cores that each machine has.
 
 
 
@@ -238,34 +231,14 @@ df['cores'].plot.hist(color = 'r', alpha = .3, title = 'Number of Cores')
 ![png](output_6_1.png)
     
 
-
-
-```python
-df['RAM'].value_counts().sort_index().plot.bar(color = 'g', alpha = .3, title = 'Amount of RAM in GHz')
-```
-
-
-
-
-    <Axes: title={'center': 'Amount of RAM in GHz'}, xlabel='RAM'>
-
-
+How much RAM each machine has. 
 
 
     
 ![png](output_7_1.png)
     
 
-
-
-```python
-df['Memory'].plot.hist(color = 'y', alpha = .3, title = 'Amount of Memory in GBs')
-```
-
-
-
-
-    <Axes: title={'center': 'Amount of Memory in GBs'}, ylabel='Frequency'>
+Finally how much storage each machine has.
 
 
 
