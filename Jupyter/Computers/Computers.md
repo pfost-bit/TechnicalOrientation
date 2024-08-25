@@ -7,7 +7,7 @@ Patrick Foster
 The following graphs are pulled from the data set. The first two are the
 qualitative data sets that could not be captured with a histogram.
 
-================
+
 
 
 First we have to read in the data using pandas. The data exists in a CSV file.
@@ -31,20 +31,7 @@ df
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -184,11 +171,6 @@ df['os'].value_counts().plot.bar(title = 'Operating Systems')
 
 
 
-    <Axes: title={'center': 'Operating Systems'}, xlabel='os'>
-
-
-
-
     
 ![png](output_3_1.png)
     
@@ -208,14 +190,6 @@ The amount of computing power based off the CPU clock speed. Here we switch to h
 ```python
 df['CPU'].plot.hist(alpha = .5, title = 'CPU clock speed in GHz')
 ```
-
-
-
-
-    <Axes: title={'center': 'CPU clock speed in GHz'}, ylabel='Frequency'>
-
-
-
 
     
 ![png](output_5_1.png)
@@ -242,8 +216,6 @@ Finally how much storage each machine has.
 
 
 
-
-    
 ![png](output_8_1.png)
     
 
