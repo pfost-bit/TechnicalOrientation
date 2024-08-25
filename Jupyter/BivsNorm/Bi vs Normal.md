@@ -51,21 +51,18 @@ plt.savefig('small_n.png', dpi=400, bbox_inches='tight')
 
 
 
-Using similar code we generate plots for *n* = 1000 and *n* = 10000
-
+### Using similar code we generate plots for *n* = 1000.
 
 
     
 ![png](med_n.png)
     
 
-
+### and *n* = 10000.
     
 ![png](large_n.png)
     
 
 
 
-```python
-
-```
+#### It is clear that as *n* approaches *N* a binomial distribution approaches a normal distribution.
